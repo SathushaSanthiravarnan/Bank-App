@@ -19,7 +19,7 @@ def create_customer_and_user():
         user_file_write(f'{customers[6]}, {customers[7]}')
 create_customer_and_user()
 
-# testing
+# testing form home 
 
 
 
