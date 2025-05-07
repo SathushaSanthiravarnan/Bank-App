@@ -1,3 +1,7 @@
 C0001,sathu,26,15,vavuniya,1235566,single
 C0002,sathu,26,15,vavuniya,12345678,single
 C0003,sathu,26,15,vavuniya,123456789,single
+C0004,Sathusha,26,15,vavuniya,12345678,single
+C0005,Ano,18,11,Vavuniya,12345678,single
+C0006,Ano,18,11,Vavu,12345678,single
+C0007,Sathu,26,15,jaffna,1237777,single

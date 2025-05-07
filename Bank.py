@@ -50,7 +50,7 @@ def create_admin_user():
         print("Admin user created successfully with username 'admin' and password 'sathu'.\n")
       
    
-# create_admin_user()
+create_admin_user()
 
 def create_customer_and_user():  
     customers = get_customer_info()
@@ -59,7 +59,7 @@ def create_customer_and_user():
         users_file.write(f'{User_id()},{customers["User_name"]},{customers["Password"]}\n')
 
   
-# create_customer_and_user()
+create_customer_and_user()
 
 
 
@@ -83,7 +83,7 @@ def find_customer(cus_id):
     else:        
         return found
 
-# find_customer()
+# find_customer(cus_id)
 
 def find_existing_account_number():
     while True:
