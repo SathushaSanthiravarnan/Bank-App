@@ -1,1 +1,3 @@
 C0001,sathu,26,15,vavuniya,1235566,single
+C0002,sathu,26,15,vavuniya,12345678,single
+C0003,sathu,26,15,vavuniya,123456789,single
