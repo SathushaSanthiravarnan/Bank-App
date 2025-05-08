@@ -50,7 +50,7 @@ def create_admin_user():
         print("Admin user created successfully with username 'admin' and password 'sathu'.\n")
       
    
-create_admin_user()
+# create_admin_user()
 
 def create_customer_and_user():  
     customers = get_customer_info()
@@ -59,7 +59,7 @@ def create_customer_and_user():
         users_file.write(f'{User_id()},{customers["User_name"]},{customers["Password"]}\n')
 
   
-create_customer_and_user()
+# create_customer_and_user()
 
 
 
@@ -108,7 +108,76 @@ def create_account():
     else:
         print('Customer ID not found.')
         
-create_account()
+# create_account()
+
+
+        
+def deposit_money():
+    while True:
+        try:
+            with open('accounts.txt', 'r') as transfer_file:
+                account_number = find_existing_account_number()   
+                print(account_number)
+                acc_num = input("Enter your account number :")  # Input should be before the loop
+                
+                found = False  # Flag to track if the account exists
+                balance = 0  # Initialize balance before using it
+                
+                for line in transfer_file:
+                    if acc_num in line:
+                        deposit_money = float(input("Enter your deposit money :"))
+                        balance += deposit_money
+                        print("'Successfully You Deposit Your Money...!' Your New Balance is:", balance)
+                        found = True
+                        break
+
+                if not found:
+                    print("Account number not found...!")
+                
+        except ValueError:
+            print("Enter Number Only...!")
+deposit_money()   
+
+# def withdraw_money():
+#     while True:
+#         try:
+#             with open('accounts.txt', 'r') as transfer_file:
+#                 account_number = find_existing_account_number()   
+#                     print(account_number)
+#                 acc_num = input("Enter your account number :")  # Input should be before the loop
+                
+#                 found = False  # Flag to track if the account exists
+#                 balance = 0  # Initialize balance before using it
+                
+#                 for line in transfer_file:
+#                     if acc_num in line:
+#                         withdraw_money = float(input("Enter your deposit money :"))
+#                         balance -= withdraw_money
+#                         print("'Successfully You Deposit Your Money...!' Your New Balance is:", balance)
+#                         found = True
+#                         break
+
+#                 if not found:
+#                     print("Account number not found...!")
+                
+#         except ValueError:
+#             print("Enter Number Only...!")
+
+withdraw_money()
+
+
+        
+# def withdraw_money():
+#     while True:
+#         try:
+#             withdraw_money = float(input("Enter your withdraw money :"))
+#             balance -= withdraw_money
+#             print("'S")
+
+# def create_transfer():
+#     with open('transfer.txt', 'a') as transfer_file:
+#         transfer_file.write(f'{balance},{transaction_history}\n')
+
 
 
 
